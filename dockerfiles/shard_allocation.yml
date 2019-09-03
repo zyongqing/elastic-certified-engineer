@@ -1,0 +1,109 @@
+version: '2.2'
+services:
+  node1:
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.2.1
+    container_name: node1
+    environment:
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+      - bootstrap.memory_lock=true
+      - cluster.name=docker-cluster
+      - node.name=node1
+      - node.attr.rack=rack1
+      - node.attr.size=big
+      - discovery.seed_hosts=node1, node2
+      - cluster.initial_master_nodes=node1, node2
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+    volumes:
+      - sa_node1:/usr/share/elasticsearch/data
+    ports:
+      - 9200:9200
+    networks:
+      - esnet
+  node2:
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.2.1
+    container_name: node2
+    environment:
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+      - bootstrap.memory_lock=true
+      - cluster.name=docker-cluster
+      - node.name=node2
+      - node.attr.rack=rack1
+      - node.attr.size=medium
+      - discovery.seed_hosts=node1, node2
+      - cluster.initial_master_nodes=node1, node2
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+    volumes:
+      - sa_node2:/usr/share/elasticsearch/data
+    networks:
+      - esnet
+  node3:
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.2.1
+    container_name: node3
+    environment:
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+      - bootstrap.memory_lock=true
+      - cluster.name=docker-cluster
+      - node.name=node3
+      - node.attr.rack=rack2
+      - node.attr.size=big
+      - discovery.seed_hosts=node1, node2
+      - cluster.initial_master_nodes=node1, node2
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+    volumes:
+      - sa_node3:/usr/share/elasticsearch/data
+    networks:
+      - esnet
+  node4:
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.2.1
+    container_name: node4
+    environment:
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+      - bootstrap.memory_lock=true
+      - cluster.name=docker-cluster
+      - node.name=node4
+      - node.attr.rack=rack2
+      - node.attr.size=medium
+      - discovery.seed_hosts=node1, node2
+      - cluster.initial_master_nodes=node1, node2
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+    volumes:
+      - sa_node4:/usr/share/elasticsearch/data
+    networks:
+      - esnet
+  kibana:
+    image: docker.elastic.co/kibana/kibana:7.2.1
+    container_name: kibana
+    environment:
+      ELASTICSEARCH_HOSTS: http://node1:9200
+    ports:
+      - 5601:5601
+    networks:
+      - esnet
+
+volumes:
+  sa_node1:
+    driver: local
+  sa_node2:
+    driver: local
+  sa_node3:
+    driver: local
+  sa_node4:
+    driver: local
+
+networks:
+  esnet:
+    driver: bridge
+    driver_opts:
+      com.docker.network.enable_ipv6: "false"

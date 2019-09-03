@@ -1,0 +1,72 @@
+version: '2.2'
+services:
+  c1n1:
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.2.1
+    container_name: c1n1
+    environment:
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+      - bootstrap.memory_lock=true
+      - cluster.name=c1
+      - node.name=c1n1
+      - discovery.seed_hosts=c1n1
+      - cluster.initial_master_nodes=c1n1
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+    volumes:
+      - ccs_c1n1:/usr/share/elasticsearch/data
+    ports:
+      - 9200:9200
+    networks:
+      - esnet
+  c2n1:
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.2.1
+    container_name: c2n1
+    environment:
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+      - bootstrap.memory_lock=true
+      - cluster.name=c2
+      - node.name=c2n1
+      - discovery.seed_hosts=c2n1
+      - cluster.initial_master_nodes=c2n1
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+    volumes:
+      - ccs_c2n1:/usr/share/elasticsearch/data
+    ports:
+      - 9201:9200
+    networks:
+      - esnet
+  c1k1:
+    image: docker.elastic.co/kibana/kibana:7.2.1
+    container_name: c1k1
+    environment:
+      ELASTICSEARCH_HOSTS: http://c1n1:9200
+    ports:
+      - 5601:5601
+    networks:
+      - esnet
+  c2k1:
+    image: docker.elastic.co/kibana/kibana:7.2.1
+    container_name: c2k1
+    environment:
+      ELASTICSEARCH_HOSTS: http://c2n1:9200
+    ports:
+      - 5602:5601
+    networks:
+      - esnet
+
+volumes:
+  ccs_c1n1:
+    driver: local
+  ccs_c2n1:
+    driver: local
+
+networks:
+  esnet:
+    driver: bridge
+    driver_opts:
+      com.docker.network.enable_ipv6: "false"
