@@ -20,50 +20,46 @@ POST outlines/_bulk
 {"index": {"_id": "10"}}
 {"course_name": "I", "course_module_id": 3, "course_module_sub_id": 2, "course_module_name": "Elasticsearch aggregations", "outline_module_id": 4, "outline_module_sub_id": 2, "outline_module_name": "Aggregations", "outline": "Write and execute aggregations that contain sub-aggregations", "docs": [{"doc_name": "Elasticsearch Reference", "chapters": ["Aggregations"]}]}
 {"index": {"_id": "11"}}
-{"course_name": "I", "course_module_id": 3, "course_module_sub_id": 3, "course_module_name": "Elasticsearch aggregations", "outline_module_id": 4, "outline_module_sub_id": 3, "outline_module_name": "Aggregations", "outline": "Write and execute pipeline aggregations", "docs": [{"doc_name": "Elasticsearch Reference", "chapters": ["Aggregations"]}]}
-{"index": {"_id": "12"}}
 {"course_name": "I", "course_module_id": 4, "course_module_sub_id": 1, "course_module_name": "Elasticsearch text analysis and mappings", "outline_module_id": 5, "outline_module_sub_id": 1, "outline_module_name": "Mappings and Text Analysis", "outline": "Define a mapping that satisfies a given set of requirements", "docs": [{"doc_name": "Elasticsearch Reference", "chapters": ["Indices APIs", "Mapping"]}]}
-{"index": {"_id": "13"}}
+{"index": {"_id": "12"}}
 {"course_name": "I", "course_module_id": 5, "course_module_sub_id": 1, "course_module_name": "Elasticsearch nodes and shards", "outline_module_id": 1, "outline_module_sub_id": 1, "outline_module_name": "Installation and Configuration", "outline": "Deploy and start an Elasticsearch cluster that satisfies a given set of requirements", "docs": [{"doc_name": "Elasticsearch Reference", "chapters": ["Set up Elasticsearch"]}]}
-{"index": {"_id": "14"}}
+{"index": {"_id": "13"}}
 {"course_name": "I", "course_module_id": 5, "course_module_sub_id": 2, "course_module_name": "Elasticsearch nodes and shards", "outline_module_id": 1, "outline_module_sub_id": 2, "outline_module_name": "Installation and Configuration", "outline": "Configure the nodes of a cluster to satisfy a given set of requirements", "docs": [{"doc_name": "Elasticsearch Reference", "chapters": ["Modules"]}]}
-{"index": {"_id": "15"}}
+{"index": {"_id": "14"}}
 {"course_name": "I", "course_module_id": 6, "course_module_sub_id": 1, "course_module_name": "Elasticsearch monitoring and troubleshooting", "outline_module_id": 6, "outline_module_sub_id": 3, "outline_module_name": "Cluster Administration", "outline": "Diagnose shard issues and repair a cluster’s health", "doccs": [{"doc_name": "Elasticsearch Reference", "chapters": ["Cluster APIs", "cat APIs", "Indices APIs"]}]}
-{"index": {"_id": "16"}}
+{"index": {"_id": "15"}}
 {"course_name": "II", "course_module_id": 1, "course_module_sub_id": 1, "course_module_name": "Elasticsearch data modeling", "outline_module_id": 5, "outline_module_sub_id": 2, "outline_module_name": "Mappings and Text Analysis", "outline": "Define and use a custom analyzer that satisfies a given set of requirements", "docs": [{"doc_name": "Elasticsearch Reference", "chapters": ["Analysis", "Indices APIs"]}]}
-{"index": {"_id": "17"}}
+{"index": {"_id": "16"}}
 {"course_name": "II", "course_module_id": 1, "course_module_sub_id": 2, "course_module_name": "Elasticsearch data modeling", "outline_module_id": 5, "outline_module_sub_id": 3, "outline_module_name": "Mappings and Text Analysis", "outline": "Define and use multi-fields with different data types and/or analyzers", "docs": [{"doc_name": "Elasticsearch Reference", "chapters": ["Mapping"]}]}
-{"index": {"_id": "18"}}
+{"index": {"_id": "17"}}
 {"course_name": "II", "course_module_id": 1, "course_module_sub_id": 3, "course_module_name": "Elasticsearch data modeling", "outline_module_id": 5, "outline_module_sub_id": 4, "outline_module_name": "Mappings and Text Analysis", "outline": "Configure an index so that it properly maintains the relationships of nested arrays of objects", "docs": [{"doc_name": "Elasticsearch Reference", "chapters": ["Mapping", "Query DSL", "Aggregations"]}]}
-{"index": {"_id": "19"}}
-{"course_name": "II", "course_module_id": 1, "course_module_sub_id": 4, "course_module_name": "Elasticsearch data modeling", "outline_module_id": 5, "outline_module_sub_id": 5, "outline_module_name": "Mappings and Text Analysis", "outline": "Configure an index that implements a parent/child relationship", "docs": [{"doc_name": "Elasticsearch Reference", "chapters": ["Mapping", "Query DSL", "Aggregations"]}]}
-{"index": {"_id": "20"}}
+{"index": {"_id": "18"}}
 {"course_name": "II", "course_module_id": 2, "course_module_sub_id": 1, "course_module_name": "Elasticsearch data processing", "outline_module_id": 2, "outline_module_sub_id": 7, "outline_module_name": "Indexing Data", "outline": "Define and use an ingest pipeline that satisfies a given set of requirements,  including the use of Painless to modify documents", "docs": [{"doc_name": "Elasticsearch Reference", "chapters": ["Ingest node", "Scripting", "Search APIs", "Query DSL", "Aggregations"]}, {"doc_name": "Painless Scripting Language", "chapters": ["Painless Guide", "Painless API Reference"]}]}
-{"index": {"_id": "21"}}
+{"index": {"_id": "19"}}
 {"course_name": "II", "course_module_id": 2, "course_module_sub_id": 2, "course_module_name": "Elasticsearch data processing", "outline_module_id": 2, "outline_module_sub_id": 6, "outline_module_name": "Indexing Data", "outline": "Use the Reindex API and Update By Query API to reindex and/or update documents", "docs": [{"doc_name": "Elasticsearch Reference", "chapters": ["Document APIs"]}]}
-{"index": {"_id": "22"}}
+{"index": {"_id": "20"}}
 {"course_name": "II", "course_module_id": 3, "course_module_sub_id": 1, "course_module_name": "Elasticsearch from dev to production", "outline_module_id": 1, "outline_module_sub_id": 3, "outline_module_name": "Installation and Configuration", "outline": "Secure a cluster using Elasticsearch Security", "docs": [{"doc_name": "Elastic Stack Overview", "chapters": ["Securing the Elastic Stack"]}]}
-{"index": {"_id": "23"}}
+{"index": {"_id": "21"}}
 {"course_name": "II", "course_module_id": 3, "course_module_sub_id": 2, "course_module_name": "Elasticsearch from dev to production", "outline_module_id": 1, "outline_module_sub_id": 4, "outline_module_name": "Installation and Configuration", "outline": "Define role-based access control using Elasticsearch Security", "docs": [{"doc_name": "Elastic Stack Overview", "chapters": ["Securing the Elastic Stack"]}]}
-{"index": {"_id": "24"}}
+{"index": {"_id": "22"}}
 {"course_name": "II", "course_module_id": 3, "course_module_sub_id": 3, "course_module_name": "Elasticsearch from dev to production", "outline_module_id": 2, "outline_module_sub_id": 3, "outline_module_name": "Indexing Data", "outline": "Define and use index aliases", "docs": [{"doc_name": "Elasticsearch Reference", "chapters": ["Indices APIs"]}]}
-{"index": {"_id": "25"}}
+{"index": {"_id": "23"}}
 {"course_name": "II", "course_module_id": 3, "course_module_sub_id": 4, "course_module_name": "Elasticsearch from dev to production", "outline_module_id": 2, "outline_module_sub_id": 4, "outline_module_name": "Indexing Data", "outline": "Define and use an index template for a given pattern that satisfies a given set of requirements", "docs": [{"doc_name": "Elasticsearch Reference", "chapters": ["Indices APIs"]}]}
-{"index": {"_id": "26"}}
+{"index": {"_id": "24"}}
 {"course_name": "II", "course_module_id": 3, "course_module_sub_id": 5, "course_module_name": "Elasticsearch from dev to production", "outline_module_id": 3, "outline_module_sub_id": 8, "outline_module_name": "Queries", "outline": "Define and use a search template", "docs": [{"doc_name": "Elasticsearch Reference", "chapters": ["Search APIs"]}]}
-{"index": {"_id": "27"}}
+{"index": {"_id": "25"}}
 {"course_name": "II", "course_module_id": 3, "course_module_sub_id": 6, "course_module_name": "Elasticsearch from dev to production", "outline_module_id": 2, "outline_module_sub_id": 5, "outline_module_name": "Indexing Data", "outline": "Define and use a dynamic template that satisfies a given set of requirements", "docs": [{"doc_name": "Elasticsearch Reference", "chapters": ["Mapping"]}]}
-{"index": {"_id": "28"}}
+{"index": {"_id": "26"}}
 {"course_name": "II", "course_module_id": 4, "course_module_sub_id": 1, "course_module_name": "Elasticsearch cluster deployment", "outline_module_id": 6, "outline_module_sub_id": 4, "outline_module_name": "Cluster Administration", "outline": "Backup and restore a cluster and/or specific indices", "docs": [{"doc_name": "Elasticsearch Reference", "chapters": ["Modules"]}]}
-{"index": {"_id": "29"}}
+{"index": {"_id": "27"}}
 {"course_name": "II", "course_module_id": 4, "course_module_sub_id": 2, "course_module_name": "Elasticsearch cluster deployment", "outline_module_id": 6, "outline_module_sub_id": 2, "outline_module_name": "Cluster Administration", "outline": "Configure shard allocation awareness and forced awareness for an index", "docs": [{"doc_name": "Elasticsearch Reference", "chapters": ["Modules"]}]}
-{"index": {"_id": "30"}}
+{"index": {"_id": "28"}}
 {"course_name": "II", "course_module_id": 4, "course_module_sub_id": 3, "course_module_name": "Elasticsearch cluster deployment", "outline_module_id": 6, "outline_module_sub_id": 6, "outline_module_name": "Cluster Administration", "outline": "Configure a cluster for cross cluster search", "docs": [{"doc_name": "Elasticsearch Reference", "chapters": ["Modules"]}]}
-{"index": {"_id": "31"}}
+{"index": {"_id": "29"}}
 {"course_name": "II", "course_module_id": 4, "course_module_sub_id": 4, "course_module_name": "Elasticsearch cluster deployment", "outline_module_id": 3, "outline_module_sub_id": 9, "outline_module_name": "Queries", "outline": "Write and execute a query that searches across multiple clusters", "docs": [{"doc_name": "Elasticsearch Reference", "chapters": ["Modules"]}]}
-{"index": {"_id": "32"}}
+{"index": {"_id": "30"}}
 {"course_name": "II", "course_module_id": 5, "course_module_sub_id": 1, "course_module_name": "Elasticsearch nodes and index management", "outline_module_id": 6, "outline_module_sub_id": 1, "outline_module_name": "Cluster Administration", "outline": "Allocate the shards of an index to specific nodes based on a given set of requirements", "docs": [{"doc_name": "Elasticsearch Reference", "chapters": ["Index modules"]}]}
-{"index": {"_id": "33"}}
+{"index": {"_id": "31"}}
 {"course_name": "II", "course_module_id": 5, "course_module_sub_id": 2, "course_module_name": "Elasticsearch nodes and index management", "outline_module_id": 6, "outline_module_sub_id": 5, "outline_module_name": "Cluster Administration", "outline": "Configure a cluster for use with a hot/warm architecture", "docs": [{"doc_name": "Elasticsearch Reference", "chapters": ["Managing the index lifecycle"]}, {"doc_name": "Blog", "chapters": ["Blogs"]}]}
-{"index": {"_id": "34"}}
+{"index": {"_id": "32"}}
 {"course_name": null, "course_module_id": null, "course_module_sub_id": null, "course_module_name": null, "outline_module_id": 3, "outline_module_sub_id": 6, "outline_module_name": "Queries", "outline": "Use the scroll API to retrieve large numbers of results", "docs": [{"doc_name": "Elasticsearch Reference", "chapters": ["Search APIs"]}]}
