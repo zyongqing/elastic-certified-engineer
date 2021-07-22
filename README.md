@@ -1,50 +1,49 @@
-# Tips for Elastic Certified Engineer Exam
+# Tips on Elastic Certified Engineer Exam
 
 ![outline full mapping](./artwork/outline.png)
 
-## About outline
+Relationships among `Elastic Training Lessons`, `Elastic Exam Objectives`, and `Elastic Docs`
 
-Mapping with Elastic Training outlines <-> Elastic Exam outlines <-> Elastic Docs
+## Presentations
+[📝 Tips on Elastic Certified Engineer Exam (Chinese Version)](Tips%20on%20Elastic%20Certified%20Engineer%20Exam%20-%20CN.pdf)
 
-| file             | info
-| ---              | --
-| `outline.xlsx`   | outline full mapping spreadsheet
-| `outlines.json`  | outline full mapping in json format
-| `outline.html`   | outline full mapping sankey diagram
+[📝 Tips on Elastic Certified Engineer Exam (English Version)](Tips%20on%20Elastic%20Certified%20Engineer%20Exam%20-%20EN.pdf)
 
-## About dockfiles
+## Self-Learning Path
+[📝 Reorder Exam Objectives (XLSX Version)](./outline/outline.xlsx)
 
-Testing environments for exam preparation
+[📝 Reorder Exam Objectives (PDF Version)](./outline/outline.pdf)
+## Docker Environments
 
-| file                        | info
+| File                        | Description
 | ---                         | --
-| `single_node.yml`           | simple testing env
+| `single_node.yml`           | simple node env
 | `node_role.yml `            | cluster and node role env
 | `elastic_security.yml`      | elastic stack security env
 | `backup_and_recovery.yml`   | backup and recovery env
 | `cross_cluster_search.yml`  | cross cluster search env
 | `shard_allocation.yml`      | shard allocation env
 
-## How to use dockerfiles
+## How to Use
 
-Startup a test env in foreground:
+Startup a testing environment in foreground:
 
 ```
 docker-compose -f your_config_file.yml up
 ```
 
-Or Startup a test env in background:
+Or Startup a testing environment in background:
 
 ```
 docker-compose -f your_config_file.yml up -d
 ```
 
-Shutdown a test env:
+Shutdown a testing environment:
 
 ```
 docker-compose -f your_config_file.yml down
 ```
-Or Shutdown a test env and data:
+Or Shutdown a test environment and delete all data:
 
 ```
 docker-compose -f your_config_file.yml down -v
